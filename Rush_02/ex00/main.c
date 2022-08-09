@@ -22,6 +22,8 @@ int	init_tabs(char *name, char ***u_ptr, char ***t_ptr, char ***p_ptr)
 	*u_ptr = fill_tab_unit(keys, values);
 	*t_ptr = fill_tab_tens(keys, values);
 	*p_ptr = fill_tab_power(keys, values);
+	free_tab(keys);
+	free_tab(values);
 	return (0);
 }
 

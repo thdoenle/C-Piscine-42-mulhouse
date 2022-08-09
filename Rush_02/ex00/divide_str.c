@@ -23,6 +23,7 @@ char	*mult_de_trois(char *str)
 	while ((i + j) % 3 != 0)
 		j++;
 	ret = malloc (sizeof(char) * (i + j + 1));
+	ret[i + j] = 0;
 	while (i >= 1)
 	{
 		ret[i + j - 1] = str[i - 1];
